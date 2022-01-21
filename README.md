@@ -6,7 +6,7 @@
 
   Бот для service desk
 
-# nightspirit.space
+# portfolio
 
   Сайт пишущийся на Python c Django
   https://nightspirit.space/
