@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<style>
+    h1 {
+        position: relative;
+        text-align: left;
+        font-family: 'Great';
+    }
+    footer {
+        text-align: center;
+    }
+    .fieldBox {
+        text-align: center;
+    }
+</style>
+<body class="w3-black">
+    <header class="w3-container w3-black">
+        <h1>NightSpirit
+            <a class="w3-btn w3-black w3-bottombar w3-hover-border-red w3-border-black" href="../">HOME</a>
+            <a class="w3-btn w3-black w3-bottombar w3-hover-border-red w3-border-black" href="../projects">PROJECTS</a>
+            <a class="w3-btn w3-black w3-bottombar w3-hover-border-red w3-border-black" href="">CONTACTS</a>
+        </h1>
+    </header>
+    <div class="w3-container w3-black w3-border" style="text-align: center; margin: 0">
+        <p class="w3-margine">EMAIL: sprunkrain@gmail.com</p><br>
+        <p class="w3-margine">Tel.: 8 (985) 177-**-**</p><br>
+    <form id="request" method="post">
+        {% csrf_token %}
+        <div class="fieldBox">
+            <label>Name: </label>
+            {{ form.Name }}
+        </div><br>
+        <div class="fieldBox">
+            <label>Phone: </label>
+            {{ form.Phone }}
+        </div><br>
+        <div class="fieldBox">
+            <label>Email: </label>
+            {{ form.Email }}
+        </div><br>
+        <div class="fieldBox">
+            <label>Request: </label>
+            {{ form.Request }}
+        </div><br>
+        <input type="submit" value="Request" class="w3-btn w3-black w3-bottombar w3-hover-border-red w3-border-black">
+    </form>
+    </div>
+    <footer class="w3-black w3-bottom">Copyright <small>&copy; <span><script>document.write(new Date().getFullYear())</script></span>, NightSpirit. All Rights Reserved</small> </footer>
+</body>
+</html>

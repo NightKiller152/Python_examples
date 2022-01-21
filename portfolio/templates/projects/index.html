@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ </head>
+<style>
+    h1 {
+        text-align: left;
+        font-family: 'Great';
+    }
+    footer {
+        text-align: center;
+    }
+    b {
+        font-family: 'Great';
+        font-size: 14pt;
+    }
+</style>
+<body>
+    <header class="w3-container w3-black">
+        <h1>NightSpirit
+            <a class="w3-btn w3-black w3-bottombar w3-hover-border-red w3-border-black" href="../">HOME</a>
+            <a class="w3-btn w3-black w3-bottombar w3-hover-border-red w3-border-black" href="">PROJECTS</a>
+            <a class="w3-btn w3-black w3-bottombar w3-hover-border-red w3-border-black" href="../contacts">CONTACTS</a>
+        </h1>
+    </header>
+    <div class="w3-container w3-black">
+        <b class="w3-btn w3-black w3-bottombar w3-hover-border-red w3-border-black" onclick="openProj('Valutes')">Valutes</b>
+        <b class="w3-btn w3-black w3-bottombar w3-hover-border-red w3-border-black" onclick="openProj('Shit')">Shit</b>
+    </div>
+    <div id="Valutes" class="w3-container proj" hidden>
+        <h2>Valutes</h2>
+        <p>Valutes is the capital city of England.</p>
+    </div>
+    <div id="Shit" class="w3-container proj" hidden>
+        <h2>Shit</h2>
+        <p>Shit is the capital city of England.</p>
+    </div>
+
+    <script>
+    function openProj(projName) {
+        var i;
+        var x = document.getElementsByClassName("proj");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        document.getElementById(projName).style.display = "block";  
+    }
+    </script>
+    <footer class="w3-black">Copyright <small>&copy; <span><script>document.write(new Date().getFullYear())</script></span>, NightSpirit. All Rights Reserved</small> </footer>
+</body>
+</html>
